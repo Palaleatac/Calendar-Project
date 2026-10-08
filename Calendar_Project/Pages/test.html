@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Strange Auth Test</title>
+</head>
+<body>
+    <input id="u" placeholder="username" />
+    <input id="p" placeholder="password" />
+    <button onclick="call('register')">Đăng ký</button>
+    <button onclick="call('login')">Đăng nhập</button>
+    <pre id="out"></pre>
+    <script>
+        async function call(action) {
+            const res = await fetch('/api/auth/' + action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: u.value, password:p.value })
+            });
+            out.textContent = res.status + '\n' + await res.text();
+        }
+    </script>
+</body>

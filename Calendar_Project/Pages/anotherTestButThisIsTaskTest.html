@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Tasks</title>
+</head>
+<body>
+    <input id="uid" placeholder="userId" size="40"><br>
+    <input id="tid" placeholder="taskId (cho sửa/xóa)" size="40"><br>
+    <button onclick="create()">Tạo task</button>
+    <button onclick="list()">Xem danh sách</button>
+    <button onclick="update()">Sửa (đánh dấu hoàn thành)</button>
+    <button onclick="del()">Xóa</button>
+    <pre id="out"></pre>
+    <script>
+    const show = async res => out.textContent = res.status + '\n' + await res.text();
+    const J = { 'Content-Type': 'application/json' };
+
+    function create() {
+      fetch('/api/tasks', { method: 'POST', headers: J, body: JSON.stringify({
+        userId: uid.value, title: 'Họp nhóm', descriptions: 'Phòng 301',
+        startTime: '2026-10-10T09:00:00', endTime: '2026-10-10T10:00:00',
+        color: 2, reminder: 15 }) }).then(show);
+    }
+    function list() {
+      fetch('/api/tasks?userId=' + encodeURIComponent(uid.value)).then(show);
+    }
+    function update() {
+      fetch('/api/tasks/' + tid.value, { method: 'PUT', headers: J, body: JSON.stringify({
+        userId: uid.value, title: 'Họp nhóm (đã sửa)', descriptions: 'Phòng 302',
+        startTime: '2026-10-10T09:00:00', endTime: '2026-10-10T10:30:00',
+        color: 3, complete: true, reminder: null }) }).then(show);
+    }
+    function del() {
+      fetch('/api/tasks/' + tid.value + '?userId=' + encodeURIComponent(uid.value),
+        { method: 'DELETE' }).then(show);
+    }
+    </script>
+</body>
+</html>
