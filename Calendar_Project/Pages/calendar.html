@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Lịch</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+</head>
+<body>
+    <div class="topbar">
+        <strong>Lịch cá nhân</strong>
+        <div class="right">
+            <span id="who"></span>
+            <div class="ft-wrap">
+                <button type="button" class="ft-help-btn" id="ftHelpBtn">?</button>
+                <label for="fFree">Freetime:</label>
+                <input id="fFree" type="number" min="0" max="1440" step="5" placeholder="phút">
+                <div class="ft-help" id="ftHelp">Freetime là thời gian rảnh, ừ nó rảnh, vậy thôi</div>
+            </div>
+            <button id="addBtn">+ Thêm task</button>
+            <button type="button" class="secondary" id="themeBtn" title="Theme"></button>
+            <button class="secondary" onclick="logout()">Đăng xuất</button>
+        </div>
+    </div>
+
+    <div id="freeBar">
+        <span id="freeText"></span>
+        <div class="free-track"><div id="freeFill"></div><div id="freeLimit"></div></div>
+    </div>
+    <div id="calendar"></div>
+    <div id="panelLayer"></div>
+    <div id="toastLayer"></div>
+
+    <div class="modal-bg" id="modalBg">
+        <div class="modal">
+            <h3 id="modalTitle">Task</h3>
+            <label>Tiêu đề</label><input id="fTitle" style="border: 1px solid black">
+            <label>Mô tả</label><textarea id="fDesc" rows="3" style="min-width: 100%;max-width: 100%;border: 1px solid black"></textarea>
+            <div class="row">
+                <div><label>Bắt đầu</label><input id="fStart" type="datetime-local" style="border: 1px solid black"></div>
+                <div><label>Kết thúc</label><input id="fEnd" type="datetime-local" style="border: 1px solid black"></div>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Màu</label>
+                    <div class="swatches" id="fColorPick">
+                        <option value="0" style="background-color: lightseagreen"></option>
+                        <option value="1" style="background-color: forestgreen"></option>
+                        <option value="2" style="background-color: orange"></option>
+                        <option value="3" style="background-color: red"></option>
+                        <option value="4" style="background-color: rebeccapurple"></option>
+                        <option value="5" style="background-color: grey"></option>
+                    </div>
+                </div>
+                <div>
+                    <label>Nhắc trước</label>
+                    <select id="fReminder" style="border: 1px solid black">
+                        <option value="">Không nhắc</option>
+                        <option value="5">5 phút</option>
+                        <option value="15">15 phút</option>
+                        <option value="30">30 phút</option>
+                        <option value="60">1 giờ</option>
+                        <option value="1440">1 ngày</option>
+                    </select>
+                </div>
+            </div>
+            <div class="check"><input id="fComplete" type="checkbox"><label for="fComplete">Đã hoàn thành</label></div>
+            <div class="msg" id="modalMsg"></div>
+            <div class="actions">
+                <button class="danger" id="delBtn">Xóa</button>
+                <button class="secondary" id="cancelBtn">Hủy</button>
+                <button id="saveBtn">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Scripts/app.js"></script>
+    <script src="../Scripts/calendar.js"></script>
+</body>
+</html>

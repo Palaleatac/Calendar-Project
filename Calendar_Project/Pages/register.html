@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+    <div class="auth-box">
+        <h2>Đăng ký</h2>
+        <label>Username</label><input id="u" autocomplete="username">
+        <label>Mật khẩu (tối thiểu 6 ký tự)</label><input id="p" type="password" autocomplete="new-password">
+        <label>Nhập lại mật khẩu</label><input id="p2" type="password" autocomplete="new-password">
+        <div class="msg" id="msg"></div>
+        <button id="btn" style="width:100%">Tạo tài khoản</button>
+        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </div>
+    <script src="../Scripts/app.js"></script>
+    <script>
+    btn.onclick = async () => {
+      msg.textContent = '';
+      if (p.value !== p2.value) { msg.textContent = 'Mật khẩu nhập lại không khớp.'; return; }
+      try {
+        await api('POST', '/auth/register', { username: u.value, password: p.value });
+        // Đăng ký xong thì đăng nhập luôn
+        const r = await api('POST', '/auth/login', { username: u.value, password: p.value });
+        localStorage.setItem('user', JSON.stringify(r));
+        location.href = 'calendar.html';
+      } catch (e) { msg.textContent = e.message; }
+    };
+    </script>
+</body>
+</html>

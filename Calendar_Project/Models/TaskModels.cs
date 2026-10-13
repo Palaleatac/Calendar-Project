@@ -7,6 +7,7 @@ namespace Calendar_Project.Models
 {
     public class TaskDto
     {
+        public int? Progress { get; set; }
         public string TaskId { get; set; }
         public string UserId { get; set; }
         public string Title { get; set; }

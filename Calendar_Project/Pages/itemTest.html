@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test TaskItems</title>
+</head>
+<body>
+    <input id="uid" placeholder="userId" size="40"><br>
+    <input id="tid" placeholder="taskId (task lớn)" size="40"><br>
+    <input id="iid" placeholder="taskItemId (cho sửa/xóa)" size="40"><br>
+    <button onclick="create()">Thêm task con</button>
+    <button onclick="list()">Xem danh sách</button>
+    <button onclick="update()">Sửa (hoàn thành, weight = 3) aka 30%</button>
+    <button onclick="del()">Xóa task con</button>
+    <pre id="out"></pre>
+    <script>
+    const show = async res => out.textContent = res.status + '\n' + await res.text();
+    const J = { 'Content-Type': 'application/json' };
+
+    function create() {
+      fetch('/api/taskitems', { method: 'POST', headers: J, body: JSON.stringify({
+        userId: uid.value, taskId: tid.value, content: 'Chuẩn bị tài liệu', taskItemWeight: 2 }) }).then(show);
+    }
+    function list() {
+      fetch('/api/taskitems?userId=' + encodeURIComponent(uid.value) +
+            '&taskId=' + encodeURIComponent(tid.value)).then(show);
+    }
+    function update() {
+      fetch('/api/taskitems/' + iid.value, { method: 'PUT', headers: J, body: JSON.stringify({
+        userId: uid.value, content: 'Chuẩn bị tài liệu (đã sửa)', taskItemWeight: 3, complete: true }) }).then(show);
+    }
+    function del() {
+      fetch('/api/taskitems/' + iid.value + '?userId=' + encodeURIComponent(uid.value),
+        { method: 'DELETE' }).then(show);
+    }
+    </script>
+</body>
+</html>

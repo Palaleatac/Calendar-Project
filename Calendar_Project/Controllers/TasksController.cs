@@ -39,12 +39,16 @@ namespace Calendar_Project.Controllers
                 var list = new List<TaskDto>();
                 using (var conn = Db.Open())
                 using (var cmd = new SqlCommand(@"
-                    SELECT TaskID, UserID, Title, Descriptions, StartTime, EndTime, Color, Complete, Reminder
-                    FROM Tasks
-                    WHERE UserID = @userId
-                      AND (@end IS NULL OR StartTime < @end)
-                      AND (@start IS NULL OR EndTime > @start)
-                    ORDER BY StartTime", conn))
+                    SELECT t.TaskID, t.UserID, t.Title, t.Descriptions, t.StartTime, t.EndTime,
+                           t.Color, t.Complete, t.Reminder,
+                           (SELECT CAST(ROUND(SUM(CASE WHEN i.Complete = 1 THEN i.TaskItemWeight ELSE 0 END) * 100.0
+                                              / SUM(i.TaskItemWeight), 0) AS INT)
+                            FROM TaskItems i WHERE i.TaskID = t.TaskID) AS Progress
+                    FROM Tasks t
+                    WHERE t.UserID = @userId
+                      AND (@end IS NULL OR t.StartTime < @end)
+                      AND (@start IS NULL OR t.EndTime > @start)
+                    ORDER BY t.StartTime", conn))
                 {
                     cmd.Parameters.AddWithValue("@userId", userId);
                     cmd.Parameters.AddWithValue("@start", (object)start ?? DBNull.Value);
@@ -64,7 +68,8 @@ namespace Calendar_Project.Controllers
                                 EndTime = r.GetDateTime(5),
                                 Color = r.IsDBNull(6) ? 0 : r.GetInt32(6),
                                 Complete = r.GetBoolean(7),
-                                Reminder = r.IsDBNull(8) ? (int?)null : r.GetInt32(8)
+                                Reminder = r.IsDBNull(8) ? (int?)null : r.GetInt32(8),
+                                Progress = r.IsDBNull(9) ? (int?)null : r.GetInt32(9)
                             });
                         }
                     }

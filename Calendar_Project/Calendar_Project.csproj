@@ -80,21 +80,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\style.css" />
     <Content Include="Global.asax" />
-    <Content Include="Pages\anotherTestButThisIsTaskTest.html" />
+    <Content Include="index.html" />
+    <Content Include="Pages\calendar.html" />
+    <Content Include="Pages\Director.html" />
+    <Content Include="Pages\itemTest.html" />
+    <Content Include="Pages\login.html" />
+    <Content Include="Pages\register.html" />
+    <Content Include="Pages\tasktest.html" />
     <Content Include="Pages\test.html" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\calendar.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\DbController.cs" />
+    <Compile Include="Controllers\TaskItemController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\Db.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AuthModels.cs" />
+    <Compile Include="Models\TaskItemModels.cs" />
     <Compile Include="Models\TaskModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Trang điều hướng</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    button{
+        max-width: fit-content;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: red;
+        color: white;
+    }
+</style>
+<script>
+    function call(page) {
+        location.href = page + '.html';
+    }
+</script>
+<body>
+    <button onclick="call('register')">Register</button>
+    <button onclick="call('login')">Login</button>
+    <button onclick="call('calendar')">Calendar</button>
+    <button onclick="call('test')">Test Auth</button>
+    <button onclick="call('tasktest')">Task Test</button>
+    <button onclick="call('itemTest')">Task Items Test</button>
+</body>
+</html>
