@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|c:\\users\\trung\\source\\repos\\calendar_project\\calendar_project\\scripts\\calendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\scripts\\calendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|c:\\users\\trung\\source\\repos\\calendar_project\\calendar_project\\pages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\pages\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|c:\\users\\trung\\source\\repos\\calendar_project\\calendar_project\\scripts\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\scripts\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|c:\\users\\trung\\source\\repos\\calendar_project\\calendar_project\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|c:\\users\\trung\\source\\repos\\calendar_project\\calendar_project\\pages\\calendar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\pages\\calendar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|C:\\Users\\trung\\source\\repos\\Calendar_Project\\calendar_project\\pages\\tasktest.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\pages\\tasktest.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|C:\\Users\\trung\\source\\repos\\Calendar_Project\\calendar_project\\pages\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6BBA755E-6E8D-4DBA-9C98-25B438226AB2}|Calendar_Project\\Calendar_Project.csproj|solutionrelative:calendar_project\\pages\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "calendar.js",
-              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Scripts\\calendar.js",
-              "RelativeDocumentMoniker": "Calendar_Project\\Scripts\\calendar.js",
-              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Scripts\\calendar.js",
-              "RelativeToolTip": "Calendar_Project\\Scripts\\calendar.js",
-              "ViewState": "AgIAABACAAAAAAAAAADgvxkCAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-10T10:56:36.597Z",
+              "Title": "login.html",
+              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\login.html",
+              "RelativeDocumentMoniker": "Calendar_Project\\Pages\\login.html",
+              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\login.html",
+              "RelativeToolTip": "Calendar_Project\\Pages\\login.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-10-10T11:27:05.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Scripts\\app.js",
-              "RelativeDocumentMoniker": "Calendar_Project\\Scripts\\app.js",
-              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Scripts\\app.js",
-              "RelativeToolTip": "Calendar_Project\\Scripts\\app.js",
-              "ViewState": "AgIAABkAAAAAAAAAAADwvyUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-10-10T10:56:12.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Css\\style.css",
-              "RelativeDocumentMoniker": "Calendar_Project\\Css\\style.css",
-              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Css\\style.css",
-              "RelativeToolTip": "Calendar_Project\\Css\\style.css",
-              "ViewState": "AgIAAIcCAAAAAAAAAAAmwJACAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-10T10:55:38.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "calendar.html",
-              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\calendar.html",
-              "RelativeDocumentMoniker": "Calendar_Project\\Pages\\calendar.html",
-              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\calendar.html",
-              "RelativeToolTip": "Calendar_Project\\Pages\\calendar.html",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAWwBcAAAAKAAAAAAAAAA==",
+              "Title": "register.html",
+              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\register.html",
+              "RelativeDocumentMoniker": "Calendar_Project\\Pages\\register.html",
+              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\register.html",
+              "RelativeToolTip": "Calendar_Project\\Pages\\register.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-10-09T04:42:05.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "tasktest.html",
-              "DocumentMoniker": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\tasktest.html",
-              "RelativeDocumentMoniker": "Calendar_Project\\Pages\\tasktest.html",
-              "ToolTip": "C:\\Users\\trung\\source\\repos\\Calendar_Project\\Calendar_Project\\Pages\\tasktest.html",
-              "RelativeToolTip": "Calendar_Project\\Pages\\tasktest.html",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-10-10T03:11:05.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-10T11:26:47.327Z"
             }
           ]
         }
